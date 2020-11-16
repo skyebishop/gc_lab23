@@ -39,5 +39,19 @@ public class GradedemoController {
 		return "addconfirm";
 	}
 	
+	@GetMapping("/delete")
+	public String delete(long id, Model model) {
+		//Added model to our parameters so that we can print stuff out
+		Grade grade = rep.findById(id).get();
+		model.addAttribute("grade", grade);
+		return "deletepage";
+	}
+	
+	@GetMapping("/reallydelete")
+	public String reallydelete(long id, Model model) {
+		rep.deleteById(id);
+		return "redirect:/";
+	}
+	
 	
 }

@@ -28,7 +28,7 @@
 	<input type="submit" />
 	
 	
-	</form>
+	</form><br />
 	<a href="/">Cancel</a>
 
 </body>
